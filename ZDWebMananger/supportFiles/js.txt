@@ -1,0 +1,78 @@
+<script>
+function click(id,url){
+document.getElementById(id).src = url
+//alert(id)
+}
+
+// 这2句是必须写的
+function connectWebViewJavascriptBridge(callback) {
+if (window.WebViewJavascriptBridge) {
+callback(WebViewJavascriptBridge)
+} else {
+document.addEventListener('WebViewJavascriptBridgeReady', function() {
+callback(WebViewJavascriptBridge)
+}, false)
+}
+}
+// 这2句是必须写的
+connectWebViewJavascriptBridge(function(bridge) {
+
+
+//注册点击事件
+bridge.registerHandler('addClick', function(data, responseCallback) {
+
+var img = document.getElementById(data)
+//点击事件的操作是callback
+img.onclick = function(responseCallback){
+responseCallback(data)
+};
+
+responseCallback('addClick')
+
+})
+
+//bridge.send 方法过来的 就会调用到这个方法 切换图片的标签
+bridge.init(function(message, responseCallback) {
+//先截取图片id
+//alert('Received message: ' + message)
+var index=message.indexOf(",")
+var messagereplace=message.substring(0,index)
+
+//截取到本地图片的路径
+var messagepath=message.substring(index+1)
+if(message.match("setClick")){
+
+messagereplace=messagereplace.replace(/setClick/,"")
+element=document.getElementById(messagereplace)
+if (element.src.match("loading.jpg")){
+
+element.onclick =  function(e) {
+//e.preventDefault()
+bridge.callHandler('downloadImg',messagereplace , function(data,responseCallback) {
+alert('设置点击成功')
+responseCallback(data)
+})
+}
+}
+}
+
+if (message.match("replaceimage")) {
+//先截取图片id
+
+
+messagereplace=messagereplace.replace(/replaceimage/,"")
+element=document.getElementById(messagereplace)
+
+if (element.src.match("loading.jpg"))
+{
+// alert(messagepath)
+element.src = messagepath
+}
+}
+if (responseCallback) {
+responseCallback("addImage")
+}
+})
+})
+</script>
+</body>
