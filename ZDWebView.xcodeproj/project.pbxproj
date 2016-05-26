@@ -37,6 +37,8 @@
 		3DC95AE11CF6DD6F0046C12C /* js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DC95ACB1CF6DD6F0046C12C /* js.txt */; };
 		3DC95AE21CF6DD6F0046C12C /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DC95ACC1CF6DD6F0046C12C /* loading.jpg */; };
 		3DC95AE31CF6DD6F0046C12C /* ZDWebMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC95ACE1CF6DD6F0046C12C /* ZDWebMananger.m */; };
+		3DC95AE61CF6EB670046C12C /* ZDFixHtmlTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC95AE51CF6EB670046C12C /* ZDFixHtmlTool.m */; };
+		3DC95AEC1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC95AEB1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,10 @@
 		3DC95ACC1CF6DD6F0046C12C /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
 		3DC95ACD1CF6DD6F0046C12C /* ZDWebMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDWebMananger.h; sourceTree = "<group>"; };
 		3DC95ACE1CF6DD6F0046C12C /* ZDWebMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDWebMananger.m; sourceTree = "<group>"; };
+		3DC95AE41CF6EB670046C12C /* ZDFixHtmlTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDFixHtmlTool.h; sourceTree = "<group>"; };
+		3DC95AE51CF6EB670046C12C /* ZDFixHtmlTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDFixHtmlTool.m; sourceTree = "<group>"; };
+		3DC95AEA1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+ZDWebImg.h"; sourceTree = "<group>"; };
+		3DC95AEB1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+ZDWebImg.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +220,10 @@
 				3DC95ACA1CF6DD6F0046C12C /* SupportFiles */,
 				3DC95ACD1CF6DD6F0046C12C /* ZDWebMananger.h */,
 				3DC95ACE1CF6DD6F0046C12C /* ZDWebMananger.m */,
+				3DC95AE41CF6EB670046C12C /* ZDFixHtmlTool.h */,
+				3DC95AE51CF6EB670046C12C /* ZDFixHtmlTool.m */,
+				3DC95AEA1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.h */,
+				3DC95AEB1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.m */,
 			);
 			path = ZDWebMananger;
 			sourceTree = "<group>";
@@ -427,7 +437,9 @@
 				3DC95AD21CF6DD6F0046C12C /* SDWebImageCompat.m in Sources */,
 				3DC95AD91CF6DD6F0046C12C /* UIImage+GIF.m in Sources */,
 				3DC95AD71CF6DD6F0046C12C /* SDWebImagePrefetcher.m in Sources */,
+				3DC95AEC1CF6FCE60046C12C /* SDWebImageManager+ZDWebImg.m in Sources */,
 				3DC95A321CF5B2F00046C12C /* ViewController.m in Sources */,
+				3DC95AE61CF6EB670046C12C /* ZDFixHtmlTool.m in Sources */,
 				3DC95A2F1CF5B2F00046C12C /* AppDelegate.m in Sources */,
 				3DC95ADB1CF6DD6F0046C12C /* UIImage+WebP.m in Sources */,
 				3DC95ADD1CF6DD6F0046C12C /* UIImageView+WebCache.m in Sources */,
@@ -667,6 +679,7 @@
 				3DC95A561CF5B2F00046C12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DC95A571CF5B2F00046C12C /* Build configuration list for PBXNativeTarget "ZDWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +688,7 @@
 				3DC95A591CF5B2F00046C12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DC95A5A1CF5B2F00046C12C /* Build configuration list for PBXNativeTarget "ZDWebViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +697,7 @@
 				3DC95A5C1CF5B2F00046C12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
